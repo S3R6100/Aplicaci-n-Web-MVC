@@ -10,8 +10,7 @@ namespace Pagina_Deportes.Models
 
         [MaxLength(100)]
         [DisplayName("Nombre del equipo:")]
-        [Required]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
         [Range(0, 20)]
         public int PartidosJugados { get; set; }

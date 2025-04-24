@@ -7,7 +7,8 @@
 <h1>ListaEquipos</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <a asp-action="Create" class="btn btn-secondary">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Equipo Favorito</a>
 </p>
 <table class="table">
     <thead>
@@ -61,10 +62,12 @@
                 @Html.DisplayFor(modelItem => item.Puntos)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }, new {@class = "btn btn-success"})  |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }, new {@class = "btn btn-success"})  |
+                <a asp-action="InformacionEquipo" asp-route-id="@item.Id" class="btn btn-info">Info</a>
+                @Html.ActionLink("Borrar", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger" })
+
             </td>
+
         </tr>
 }
     </tbody>

@@ -1,0 +1,37 @@
+﻿
+@model Pagina_Deportes.Models.Equipo
+
+@{
+    ViewData["Title"] = "Detalles del Equipo";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card mt-4">
+    <div class="card-header bg-primary text-white">
+        <h3>@Model.Nombre</h3>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-4">Partidos Jugados</dt>
+            <dd class="col-sm-8">@Model.PartidosJugados</dd>
+
+            <dt class="col-sm-4">Partidos Ganados</dt>
+            <dd class="col-sm-8">@Model.PartidosGanados</dd>
+
+            <dt class="col-sm-4">Partidos Empatados</dt>
+            <dd class="col-sm-8">@Model.PartidosEmpatados</dd>
+
+            <dt class="col-sm-4">Partidos Perdidos</dt>
+            <dd class="col-sm-8">@Model.PartidosPerdidos</dd>
+
+            <dt class="col-sm-4">Puntos Totales</dt>
+            <dd class="col-sm-8"><strong>@Model.Puntos</strong></dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="ListaEquipos" class="btn btn-secondary">Volver</a>
+</div>
+
